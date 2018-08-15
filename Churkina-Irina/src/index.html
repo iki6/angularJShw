@@ -1,0 +1,29 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	<script src="./app.js"></script>
+</head>
+
+<body ng-app="angularHW">
+	<div class="angularHW__parent" ng-controller="mainCtrl as ctrl">
+		<h3 ng-class="ctrl.shownPet.length ? 'hidden' : ''">Click any button</h3>
+		<div class="angularHW__child angularHW__child--dog" ng-controller="dogCtrl">
+			<button ng-click="ctrl.showDog()">Show dog</button>
+		</div>
+		<div class="angularHW__child angularHW__child--cat" ng-controller="catCtrl">
+			<button ng-click="ctrl.showCat()">Show cat</button>
+		</div>
+		<div ng-show="ctrl.shownPet === dog.petType" class="angularHW__image-holder" ng-controller="dogCtrl as dog">
+			<img src="pic/Beagle.jpg" alt="dog image">
+			<span>{{dog.says}}</span>
+		</div>
+		<div ng-show="ctrl.shownPet === cat.petType" class="angularHW__image-holder" ng-controller="catCtrl as cat">
+			<img src="pic/cat.jpg" alt="cat image">
+			<span>{{cat.says}}</span>
+		</div>
+	</div>
+</body>
+
+</html>
