@@ -1,14 +1,17 @@
 
-
 .angularHW__parent{
 	text-align: center;
 	padding: 50px 10px;
+	background: url('./pic/sun.jpg') left top;
+	background-size: 150px auto;
+	background-repeat: no-repeat
 }
 
 .angularHW__parent h3{
 	opacity: 1;
 	transition: .3s;
 	color: #444;
+	font-family: 'Indie Flower', cursive;
 }
 
 .angularHW__parent h3.hidden{
@@ -29,6 +32,8 @@
 	border: none;
 	margin: 0 5px;
 	transition: .1s;
+	font-size: 13px;
+	outline: none;
 }
 
 .angularHW__child button:hover{
@@ -59,10 +64,11 @@
 	max-width: 100%;
 }
 
-.angularHW__image-holder span{
+.angularHW__image-holder span,
+pet-type{
+	font-family: 'Indie Flower', cursive;
 	display: block;
-	text-align: center;
 	padding: 10px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
+	text-align: center;
+	font-size: 18px;
 }

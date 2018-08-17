@@ -1,6 +1,9 @@
 <html>
 
 <head>
+	<meta charset="utf-8">
+	<title>AngularHW</title>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 	<link rel="stylesheet" href="./style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
 	<script src="./app.js"></script>
@@ -19,10 +22,11 @@
 			<img src="pic/Beagle.jpg" alt="dog image">
 			<span>{{dog.says}}</span>
 		</div>
-		<div ng-show="ctrl.shownPet === cat.petType" class="angularHW__image-holder" ng-controller="catCtrl as cat">
+		<div ng-show="ctrl.shownPet == cat.petType" class="angularHW__image-holder" ng-controller="catCtrl as cat">
 			<img src="pic/cat.jpg" alt="cat image">
 			<span>{{cat.says}}</span>
 		</div>
+		<pet-type ng-show="ctrl.shownPet.length"></pet-type>
 	</div>
 </body>
 
